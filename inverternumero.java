@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class inverternumero {
     static void main() {
         Scanner sc = new Scanner(System.in);
+        /*
         System.out.println("escreva uma sequencia de numero\nex: 1234 :");
         String num = sc.nextLine();
         String invert = new StringBuilder(num).reverse().toString();
@@ -21,7 +22,19 @@ public class inverternumero {
         for (int i = 0; i < tamanhoVetor; i++) {
             vetorInverso[i] = vetor[tamanhoBaseZero - i];
             System.out.print(vetorInverso[i]);
+        }*/
+        //inverter sem usar String
+        System.out.println("escreva um sequencia de numero:");
+        int numeroInteiro = sc.nextInt();
+        int revert = 0 ;
+        while (numeroInteiro != 0) {
+            int digi = numeroInteiro % 10;
+            revert = revert * 10 + digi;
+            numeroInteiro /= 10;
         }
+        System.out.println(revert);
+
+
     }
 
 }
